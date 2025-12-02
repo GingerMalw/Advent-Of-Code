@@ -1,8 +1,10 @@
-import re
-
 # --- Day 3: Mull It Over ---
 
-with open("Day3/Day3_input.txt", "r") as plik:
+import re
+from tkinter import filedialog
+
+input_files = filedialog.askopenfilename()
+with open(input_files, "r", encoding='utf-8') as plik:
     data = plik.read()
 
 # Part 1

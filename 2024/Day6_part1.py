@@ -1,6 +1,8 @@
-import re
-
 # --- Day 6: Guard Gallivant ---
+
+import re
+from tkinter import filedialog
+
 # PART ONE
 
 def start_point(data):
@@ -103,11 +105,9 @@ def moving_left(lines, str_line_id, str_col_id):
                 break
 
 
-# data_input = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day6\Day6_input_sample.txt"
-data_input = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day6\Day6_input.txt"
-
-with open(data_input, 'r', encoding="utf-8") as plik:
-    lines = plik.readlines()
+data_input = filedialog.askopenfilename()
+with open(data_input, "r", encoding='utf-8') as plik:
+    lines = plik.read()
             
 start = start_point(lines)
 moving_up(lines, start[0], start[1])

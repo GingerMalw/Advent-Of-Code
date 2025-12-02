@@ -1,5 +1,7 @@
 # --- Day 5: Print Queue ---
 
+from tkinter import filedialog
+
 # Part One function:
 def find_correct_updates(all_updates, all_orders):
     correct_updates = []
@@ -84,10 +86,13 @@ def page_ordering_rules(list, all_orders):
     return fix_updates
 
 # Data inputs:
-# updates = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day5\Day5_sample_input_update.txt"
-updates = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day5\Day5_input_update.txt"
-# ordering = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day5\Day5_sample_input_ordering.txt"
-ordering = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day5\Day5_input_ordering.txt"
+updates_input = filedialog.askopenfilename()
+with open(updates_input, "r", encoding='utf-8') as plik:
+    updates = plik.read()
+
+ordering_input = filedialog.askopenfilename()
+with open(updates_input, "r", encoding='utf-8') as plik:
+    ordering = plik.read()
 
 # --- Part One ---
 

@@ -1,6 +1,7 @@
-import re
-
 # --- Day 4: Ceres Search ---
+
+import re
+from tkinter import filedialog
 
 # - the vertical where need to count digits in row and check if the same position in next row fit the word creation (or backward word),
 def load_grid(data):
@@ -74,9 +75,8 @@ def check_diag_mas(grid, word1, word2):
     return count
 
 
-# path = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day4\Day4_sample_input.txt"
-path = r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day4\Day4_input.txt"
-with open(path, "r") as plik:
+input_files = filedialog.askopenfilename()
+with open(input_files, "r", encoding='utf-8') as plik:
     data = plik.read()
 
 # Part 1
@@ -90,7 +90,7 @@ all_simple = len(find_simple_samx) + len(find_simple_xmas)
 # print(find_simple)
 print("Amount of 'XMAS' and 'SAMX' in simple way: ", all_simple)
 
-data_grid = load_grid(path)
+data_grid = load_grid(input_files)
 vertical_samx = check_vert(data_grid, simple_samx)
 vertical_xmas = check_vert(data_grid, simple_xmas)
 find_vertical = vertical_samx + vertical_xmas

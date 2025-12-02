@@ -1,6 +1,6 @@
-import os
-
 # --- Day 2: Red-Nosed Reports ---
+
+from tkinter import filedialog
 
 def report_inc(report):
     for level in range(len(report)-1):
@@ -15,7 +15,8 @@ def report_dec(report):
             return False
     return True
 
-with open(r"C:\Users\malwi\Desktop\Codding_stuff_MW\AdventOfCode2024\AoC2024\Day2\Day2_input.txt", "r") as plik:
+input_files = filedialog.askopenfilename()
+with open(input_files, "r", encoding='utf-8') as plik:
     data = plik.read()
 
 # Part I

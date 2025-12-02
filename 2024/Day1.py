@@ -1,8 +1,9 @@
-import os
-
 # --- Day 1: Historian Hysteria ---
 
-with open("Day1/Day1_input.txt", "r") as plik:
+from tkinter import filedialog
+
+input_file = filedialog.askopenfilename()
+with open(input_file, "r", encoding='utf-8') as plik:
     data = plik.read()
     # print(data)
 
