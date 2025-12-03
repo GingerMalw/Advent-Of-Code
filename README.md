@@ -1,2 +1,2 @@
-https://adventofcode.com/2024
-my solutions :)
+https://adventofcode.com
+Puzzle solutions :) learning for fun.
