@@ -23,6 +23,8 @@ def manifold(input):
             print(start)
 
     for row_id in range(start[0]+1, len(input)):
+        empty = "."
+        splitter = "^"
         print(row_id, input[row_id]) 
 
         # IN PROGRESS!!
